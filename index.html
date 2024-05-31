@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>CalculateSalary</title>
+</head>
+<body>
+    <form>
+        
+        <h3>Provide your name and surname down below:</h3>
+        <label for="Username">Name:</label>
+        <input class="name" type="text" placeholder="Please enter your name">
+        <label for="Username">Surname:</label>
+        <input class="name" type="text" placeholder="Please enter your Surname">
+        
+        
+        <h3>Provide your Date of Birth down below:</h3>
+        <input class="DOB" type="date"/>
+        
+        
+        <h3>Provide your age down below:</h3>
+        <label for="Username">Age:</label>
+        <input type="text" class="age" placeholder="Please enter your Age">
+        <input type="text" class="age" placeholder="Please enter your Birthyear">
+        
+        
+        <h3>Provide your gender down below</h3>
+            <label><input type = "radio" name = "male-female" value = "male">Male</label>
+            <label><input type = "radio" name = "male-female" value = "female">Female</label>
+        
+        
+        
+        <h3>What is your current status?</h3>
+            <label><input class="status" type = "radio" name="Mrs-Miss-Mr-Doctor">Mrs</label>
+            <label><input class="status" type = "radio" name="Mrs-Miss-Mr-Doctor">Miss</label>
+            <label><input class="status" type = "radio" name="Mrs-Miss-Mr-Doctor">Mr</label>
+            <label><input class="status" type = "radio" name="Mrs-Miss-Mr-Doctor">Doctor</label>
+        
+        
+        
+        <h3>What is your Subjects?</h3>
+            <label><input class="status" type = "checkbox">HTML</label>
+            <label><input class="status" type = "checkbox">CSS</label>
+            <label><input class="status" type = "checkbox">JavaScript</label>
+            <label><input class="status" type = "checkbox">Angular</label>
+            <label><input class="status" type = "checkbox">VueJS</label>
+
+            
+        </form>
+        
+        
+        <div id="answer">
+        <h2>Are you currently working?</h2>
+        <button class="details" onclick="showWorkDetails(false)">No</button>
+        <button class="details" onclick="showWorkDetails(true)">Yes</button>
+        </div>
+          
+        
+        <div id="workDetails" style="display:none;">
+            <h2>Enter Your Salary Details</h2>
+            <form id="salaryForm">
+                <label for="hoursWorked">Hours Worked: </label>
+                <input type="number" id="hoursWorked" name="hoursWorked" required>
+                <label for="hourlyRate">Hourly Rate (R): </label>
+                <input type="number" id="hourlyRate" name="hourlyRate" required>
+                <label for="taxRate">Tax Rate (%): </label>
+                <input type="number" id="taxRate" name="taxRa te" required>
+                <button type="button" class="salarybutton" onclick="calculateSalary()">Calculate Salary</button>
+            </form>
+            <div id="salaryResult"></div>
+        </div>
+        <div class="form-group d-flex">
+            <button class="bottombutton" type="submit">Send Message</button>
+
+        </div>
+</body>
+<script src="script/code.js"></script>
+</html>
